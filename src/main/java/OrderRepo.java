@@ -20,11 +20,15 @@ public class OrderRepo {
         return orderList;
     }
 
-    @Override
-    public String toString() {
-        return "ProductRepo{" +
-                "productList=" + orderList +
-                '}';
+    public Order getOrderById(String id){
+        int test = Integer.parseInt(id);
+        //System.out.println("test" + test);
+        return orderList.get(id);
     }
 
+    @Override
+    public String toString() {
+        return "OrderRepo{" +
+                "\norderList=" + orderList;
+    }
 }

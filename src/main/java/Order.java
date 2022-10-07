@@ -4,7 +4,7 @@ public class Order {
 
     // bestelle shampoo und Bodylotion
     // orderID = 12345 -> (1, Shampoo)
-    //
+    // HashMap [key:1 ; Inhalt(Order)]
     String orderId;
     Product product;
 //      aus der Liste productList = products;

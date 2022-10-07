@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +17,12 @@ public class Main {
         shopService.addProduct(newProduct2);
         shopService.addProduct(newProduct3);
 
-
+        //Nutzer bekommt alle verfügbaren Produkte angezeigt
         System.out.println(productRepo.getList());
+
+        //Nutzer fügt Produkte bestellung hinzu
+        // Scanner Methode
+        // Der Nutzer wird immer gefragt möchtest du noch ein Produkt in den Warenkorb legen
 
         Order newOrder = new Order("34567", newProduct1);
         Order newOrder2 = new Order("111", newProduct3);
@@ -32,8 +37,19 @@ public class Main {
 
         System.out.println(orderRepo.getList());
 
+        String idString = "111";
+        try {
+            System.out.println(orderRepo.getOrderById(idString));
+        }catch(NoSuchElementException e){
+            System.out.println("Hier ist der Eingabefehler: " + idString);
+        }
 
-
+        /*
+        if (orderRepo.getOrderById(idString) == null){
+            throw new NoSuchElementException("Hier ist der Eingabefehler: " + idString);
+        }
+        System.out.println("Ausgabe Bestellung:");
+        */
 
     }
 }
