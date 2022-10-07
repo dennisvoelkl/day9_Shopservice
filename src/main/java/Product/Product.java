@@ -1,8 +1,15 @@
 package Product;
 
-public class Product {
+public class Product{
     private int productID;          // Artikelnummer beginnt bei 1
     private String productName;     // Name des Produktes
+
+    // Konstruktor damit unser produkt immer einen Namen und ID erhält
+
+    public Product(int productID, String productName) {
+        this.productID = productID;
+        this.productName = productName;
+    }
 
     public int getProductID() {
         return productID;
