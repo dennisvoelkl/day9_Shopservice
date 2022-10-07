@@ -1,5 +1,3 @@
-package Product;
-
 public class Product{
     private int productID;          // Artikelnummer beginnt bei 1
     private String productName;     // Name des Produktes
