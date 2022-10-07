@@ -19,5 +19,21 @@ public class Main {
 
         System.out.println(productRepo.getList());
 
+        Order newOrder = new Order("34567", newProduct1);
+        Order newOrder2 = new Order("111", newProduct3);
+        Order newOrder3 = new Order("88765", newProduct2);
+
+
+        OrderRepo orderRepo = new OrderRepo();
+        ShopService shopService1 = new ShopService(orderRepo);
+        shopService1.addOrder(newOrder);
+        shopService1.addOrder(newOrder2);
+        shopService1.addOrder(newOrder3);
+
+        System.out.println(orderRepo.getList());
+
+
+
+
     }
 }
